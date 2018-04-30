@@ -1,6 +1,5 @@
 ---
 title: Solving a challenge
-tags: [introduction]
 sidebar: mydoc_sidebar
 permalink: solve_challenge.html
 summary: Solving a challenge in kurukshetra requires modifying the existing piece of code to patch the vulnerability present in it without modifying its functionality i.e. once the patching is done, functionality should still be retained.

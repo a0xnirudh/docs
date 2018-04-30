@@ -49,11 +49,7 @@ entries:
       url: /write_challenge.html
       output: web, pdf
 
-    - title: Uploading a new challenge
-      url: /upload_challenge.html
-      output: web, pdf
-
-    - title: Updating an existing challenge
+    - title: Upload/Update/Disable challenges
       url: /update_challenge.html
       output: web, pdf
 
@@ -75,5 +71,5 @@ entries:
     folderitems:
 
     - title: Future of Kurukshetra
-      url: /protostar_stack.html
+      url: /roadmap.html
       output: web, pdf
