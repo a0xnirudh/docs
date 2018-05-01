@@ -6,7 +6,9 @@ permalink: install.html
 summary: Once the environment is set, let's install kurukshetra
 ---
 
-Once the environment is set, we can go ahead and install kurukshetra just like a CMS installation. Installing kurukshetra is as simple as moving the downloaded files into webroot:
+
+
+Once the environment is set, kurukshetra can be installed just like any other CMS. Installing kurukshetra is as simple as moving the downloaded files into webroot:
 
 ```bash
 # Clone the github repo and move all the files into Web root
@@ -27,7 +29,7 @@ Visit `http://localhost` or `http://127.0.0.1` to navigate into installation (wi
 The project files must be on the webroot or else location redirection's will fail to work and hence project won't work properly.
 "%}
 
-While visiting, since it's the first time (installation is not yet done), it will redirect to `/installation/index.php`, where we should enter the MySQL db credentials (user should have the permission to create database) and click on validate to see if the credentials are correct.
+To correctly initialize the database for the framework, the respective MySQL db credentials should be provided by the user and the same can be validated using the validate option provided.
 
 {% include image.html file="install.png" alt="Installing kurukshetra" caption="Installing and configuring kurukshetra" %}
 
@@ -38,4 +40,4 @@ Click next and enter the Google OAuth **Client ID** and **Client secret** and ma
 The first logged in user immediately after the installation is automatically given the **Admin** privileges. Please make sure to login first with a valid account immediately once installation is over.
 "%}
 
-Once the installation is done correctly, you can visit `http://127.0.0.1` which will give the login page to the user (only Google login is supported as of now).
+Once the installation is done correctly, the localhost `http://127.0.0.1` should redirect to the user login page (only Google login is supported as of now).
