@@ -24,7 +24,7 @@ There are a few packages which are necessary before proceeding with the installa
 
 ### Installing PHP 7.2
 
-In ubuntu, you can run the following commands to install **PHP 7.2** along with all the necessary extensions:
+In ubuntu, the following commands can be run to install **PHP 7.2** along with all the necessary extensions:
 
 ```bash
 sudo add-apt-repository ppa:ondrej/php
@@ -38,7 +38,7 @@ Read the official [instructions](http://php.net/manual/en/install.php){:target="
 
 ### Installing Docker
 
-In ubuntu, you can run the following commands to install **Docker** (add the GPG key from official repository and install it):
+In ubuntu, following commands can be run to install **Docker** (add the GPG key from official repository and install it):
 
 ```bash
 # add the GPG key for the official Docker repository
@@ -76,4 +76,4 @@ sudo chown www-data: /var/config
 
 ```
 
-Now we can go ahead and install kurukshetra via the browser by logging onto `http://127.0.0.1/`.
+Now kurukshetra can be installed via the browser by logging onto `http://127.0.0.1/`.
