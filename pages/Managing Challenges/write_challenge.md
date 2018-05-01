@@ -81,7 +81,7 @@ Now we can write all the test cases inside this particular class. But before wri
 Cleaning up the setup via **`tearDown()`** after the tests is not really required here in most of the cases since the tests are being run inside the container and it will be killed immediately after the completion of the test.
 "%}
 
-For example, in the above challenge, we need to have a directory named `/tmp/tokens` for the challenge to work properly so we can write the code to create this directory if not exist before running the tests.
+For example, in the above challenge, we need to have a directory named `/tmp/tokens` for the challenge to work properly so we can write the code to create this directory if it doesnot exist before running the tests.
 
 ```php
 public function setUp()
@@ -105,12 +105,12 @@ public function testcreateToken()
         $this->assertFileExists('/tmp/tokens/' . md5($string), 'INFO: File creation failed. createToken() function is not working as expected !');
     }
 ```
-Here we defined a test case where we created a random string which is then passed to the actual function createToken() which is supposed to create a file on `/tmp/tokens/<random_string>`. Once the function execution is complete, we will check if the file is actually created or not using assertions. The 3rd argument to `assertFileExists()` is very important because if the assertion failed, this will be shown to the user. The string much start with **INFO:** followed by the message to be printed on to the user who is trying to solve the challenge.
+Here we defined a test case where we created a random string which is then passed to the actual function createToken() which is supposed to create a file on `/tmp/tokens/<random_string>`. Once the function execution is complete, we will check if the file is actually created or not using assertions. The 3rd argument to `assertFileExists()` is very important because if the assertion failed, this will be shown to the user. The string must start with **INFO:** followed by the message to be printed on to the user who is trying to solve the challenge.
 
 {% include important.html content="
 All the assertions should contain the 3rd argument, a string which starts with the keyword **`INFO: `** followed by the message which will be shown to the user incase the test case failed. <br/><br/>
 
-If none of the test cases returns any INFO messages, framework assumes that the all the test cases has been validated and the user has successfully completed the challenge (the message will be returned only if the assertion fails).
+If none of the test cases returns any INFO messages, framework assumes that all the test cases has been validated and the user has successfully completed the challenge (the message will be returned only if the assertion fails).
 "%}
 
 Similarly, we can write unittest case for the function `clearToken()` as well:
@@ -129,7 +129,7 @@ public function testclearToken()
     }
 ```
 
-Now this function will first call the createToken() to create a random token and then call's the `clearToken()` to delete the token. So once the `testclearToken()` completes execution, the token should be first created (when we call the createToken()) and then destroyed.
+Now this function will first call the createToken() to create a random token and then calls the `clearToken()` to delete the token. So once the `testclearToken()` completes execution, the token should be first created (when we call the createToken()) and then destroyed.
 
 So now we have completed checking the functionality of both the functions so if both test cases succeeds, then we are sure that the functions are working properly. Now lets focus on the vulnerability part. Quoting from the [RIPS Security calendar 2017](https://www.ripstech.com/php-security-calendar-2017/){:target="_blank"} regarding the challenge solution:
 
@@ -219,4 +219,4 @@ class TokenStorageTest extends TestCase
 }
 ```
 
-This is how we write a valid unittest file which contains all the test cases to check if the challenge has solved or not. Similarly we can include more challenge by writing valid test cases for the same.
+This is how we write a valid unittest file which contains all the test cases to check if the challenge has been solved or not. Similarly we can include more challenges by writing valid test cases for the same.
