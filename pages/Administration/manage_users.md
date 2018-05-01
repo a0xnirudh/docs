@@ -13,7 +13,7 @@ Once logged in as **admin**, visit `/admin/users.php` to list all the users who 
 
 {% include image.html file="user_management.png" alt="managing users in kurukshetra" caption="Managing users in kurukshetra" max-width=850%}
  
-Eixisting users can be granted admin privilages by just ticking the tickbox next to the users name.
+Eixisting users can be granted admin privilages by just ticking the tickbox next to the user's name.
  
 {% include important.html content="
 Extensive care must be taken while adding new administrators because of the fact that an administrator also have the privilage to remove admin privileges of other administrators.%}
@@ -21,7 +21,7 @@ Extensive care must be taken while adding new administrators because of the fact
  
 ### Disable users
  
-Once logged in as **admin**, visit `/admin/users.php` to list all the users who has logged in (atleast once) into kurukshetra. Users can be denied access by simply unchecking the checkbox named **Enable?**. The users who have been denied access can be regiven access by an admin by reverting the same back.
+Once logged in as **admin**, visit `/admin/users.php` to list all the users who has logged in (atleast once) into kurukshetra. Users can be denied access by simply unchecking the checkbox named **Enable?**. The users who have been denied access can be given access again by an admin by reverting the same.
  
 {% include tip.html content="
 By default, a new user logging into the framework is automatically enabled. To disable a user, an administrator has to manually disable the user login from the dashboard."%}
