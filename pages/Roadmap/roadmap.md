@@ -5,7 +5,7 @@ permalink: roadmap.html
 summary: Kurukshetra is currently in its very early stage. A lot of features and enhancements will added to the framework coming down the lane. A few of them are listed here.
 ---
 
-Kurukshetra is fairly a very new project is currently in its very early stage. A lot of feature requests and enhancements are already planned and will be added to the framework in a periodic manner.
+Kurukshetra is fairly a very new project, and is currently in its early stage. A lot of feature requests and enhancements are already planned and will be added to the framework in a periodic manner.
 
 
 * Support for more **programming languages** including but not limited to Java, NodeJs and Ruby on Rails.
