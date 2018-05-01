@@ -5,7 +5,7 @@ permalink: solve_challenge.html
 summary: Solving a challenge in kurukshetra requires modifying the existing piece of code to patch the vulnerability present in it without modifying its functionality i.e. once the patching is done, functionality should still be retained.
 ---
 
-Once installation is done, anyone with a Google account can login to the framework (and by default only the first logged in user after the installation is given the admin permissions. All the other users are normal users unless one of the admins manually promoted another user to admin via the framework dashboard.)
+Once installation is done, anyone with a Google account can login to the framework (and by default only the first logged in user after the installation is given the admin permissions. All the other users are normal users unless one of the admins manually promotes another user to admin via the framework dashboard.)
 
 ### Listing challenges
 
@@ -29,14 +29,14 @@ class Src {
 
 From the very simple example above, we can see that inside the class Src `sanitize()` function is defined in order to HTML encode the user input and return it back to prevent XSS attacks.
 
-The vulnerability in the above code is that the user input is getting reflected back in the HTML response as a part of span title tag but the problem here is that the tag uses single quotes to wrap strings and **`htmlspecialchars`** by default won't encode single quotes. Hence the payload **`' onload=alert(2)`** will break out of the string context and will execute `alert(2)`.
+The vulnerability in the above code is that the user input is getting reflected back in the HTML response as a part of span title tag. The problem here is that the tag uses single quotes to wrap strings and **`htmlspecialchars`** by default won't encode single quotes. Hence the payload **`' onload=alert(2)`** will break out of the string context and will execute `alert(2)`.
 
 
 ### Patching challenges
 
 In order to solve the above challenge, we should fix the vulnerability but the functionality itself shouldn't be changed. So we should patch the challenge in such a way that functionality is retained but vulnerability is patched.
 
-From the [official PHP documentation](http://php.net/manual/en/function.htmlspecialchars.php){:target="_blank"}, its documented that in order for the htmlspecialchars() to encode single quotes, an argument namely **`ENT_QUOTES``** should be passed on to the function.
+From the [official PHP documentation](http://php.net/manual/en/function.htmlspecialchars.php){:target="_blank"}, it's documented that in order for the htmlspecialchars() to encode single quotes, an argument namely **`ENT_QUOTES``** should be passed on to the function.
 
 So we can patch the vulnerability by updating the challenge code to include the function argument and submit it back to the framework.
 
@@ -50,7 +50,7 @@ class Src {
 }
 ```
 
-Submitting the above code will solve the challenge. If you submit wrong code, you will see the error messages based on the submitted code. Let's say we altered the functionality of the code and submit it back to the framework, it will show us error based on the same. For example, if we simply submit the code back to the framework without any modification, then we will get the following message from the framework:
+Submitting the above code will solve the challenge. If you submit wrong code, you will see error messages based on the submitted code. Let's say we altered the functionality of the code and submit it back to the framework, it will show us error based on the same. For example, if we simply submit the code back to the framework without any modification, then we will get the following message from the framework:
 
 
 ```
@@ -65,4 +65,4 @@ Similarly, if we simply submit modify the return value to 1 (so that no matter w
 The error messages can be customized while writing unittests. For more information, refer to [How to write a challenge](/write_challenge.html).
 "%}
 
-This is how we could solve a challenge in kurukshetra. You can also read about how to write more advanced challenges, see [How to write a challenge](/write_challenge.html).
+This is how we can solve a challenge in kurukshetra. You can also read about how to write more advanced challenges, see [How to write a challenge](/write_challenge.html).
