@@ -5,7 +5,7 @@ permalink: manage_users.html
 summary: New admins can be added by already existing administrators from the kurukshetra dashboard. Admins can also disable existing users and prevent them from logging in back to the framework.
 ---
 
-Administrators has the ability to manage users by adding more administrators (existing users can be made admins from the dashboard) or by also disabling login to the framework by blacklisting the email address.
+Currently administrators have two critical abilities, the ability to create new adminstrators and the ability to disable existing users.
 
 ### Adding Administrators
 
@@ -13,15 +13,15 @@ Once logged in as **admin**, visit `/admin/users.php` to list all the users who 
 
 {% include image.html file="user_management.png" alt="managing users in kurukshetra" caption="Managing users in kurukshetra" max-width=850%}
  
- Simply click on the tickbox next to each user to make them an admin.
+Eixisting users can be granted admin privilages by just ticking the tickbox next to the users name.
  
 {% include important.html content="
-While adding new administrators, be very careful. An administrator can also remove admin privileges from other administrators (making them a normal user) or even block them from logging into the framework again."%}
+Extensive care must be taken while adding new administrators because of the fact that an administrator also have the privilage to remove admin privileges of other administrators.%}
  
  
 ### Disable users
  
-Once logged in as **admin**, visit `/admin/users.php` to list all the users who has logged in (atleast once) into kurukshetra. You can disable a user login by simply unchecking the checkbox named **Enable?** and the framework will disable that account login until its re-enabled manually by an admin.
+Once logged in as **admin**, visit `/admin/users.php` to list all the users who has logged in (atleast once) into kurukshetra. Users can be denied access by simply unchecking the checkbox named **Enable?**. The users who have been denied access can be regiven access by an admin by reverting the same back.
  
 {% include tip.html content="
 By default, a new user logging into the framework is automatically enabled. To disable a user, an administrator has to manually disable the user login from the dashboard."%}
