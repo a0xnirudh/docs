@@ -4,7 +4,7 @@ sidebar: mydoc_sidebar
 permalink: update_challenge.html
 summary: New challenges can be uploaded or existing challenges can be updated/disabled via the Admin dashboard of Kurukshetra.
 ---
-Since now we can write new challenges, let try to upload the challenges in to kurukshetra so that other people can work on these challenges and solve them.
+As we can write new challenges now, let's try to upload the challenges in to kurukshetra so that other people can work on these challenges and solve them.
 
 {% include tip.html content="
 Uploading/Updating/Approving/Disabling - These functionalities are restricted to **Administrators** and normal users will not have access to any of these functionalities.
@@ -25,7 +25,7 @@ Once logged in as **admin**, visit `/admin/view_edit.php` to list all the challe
 
 {% include image.html file="enable_challenge.png" alt="Enable challenges on kurukshetra" caption="Enabling/Disabling a challenge on kurukshetra" max-width=850 %}
 
-All the challenges present in the framework are listed above and one can simply clicking on the checkbox, to enable/disable any challenges.
+All the challenges present in the framework are listed above and one can simply click on the checkbox, to enable/disable any challenges.
 
 
 ### Editing challenges
